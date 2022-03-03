@@ -1,12 +1,8 @@
 Use Case-8:
-create table employee_payroll (id int unsigned not null  auto_increment, 
-								employee_name varchar(150),
-                                primary key(id));
+create table employee_payroll (id int unsigned not null  auto_increment, employee_name varchar(150), primary key(id));
                                 
-alter table employee_payroll add  (phoneNo varchar(250), 
-									address varchar(250), 
-                                    department varchar(150));
-                                    desc employee_payroll;
+alter table employee_payroll add  (phoneNo varchar(250),address varchar(250), department varchar(150));
+desc employee_payroll;
 
 alter table employee_payroll alter address set default 'Mumbai';
 
@@ -17,17 +13,13 @@ alter table employee_payroll change department department varchar(150) not null;
 alter table employee_payroll add gender char(1) after department;
 
 Use Case-9:
-alter table employee_payroll add  (basic_pay double not null, 
-									deductions double not null, 
-                                    taxable_pay double not null,
-                                    incometax double not null,
-                                    net_pay double not null);
+alter table employee_payroll add  (basic_pay double not null,deductions double not null, taxable_pay double not null, incometax double not null, net_pay double not null);
 desc employee_payroll;
 alter table employee_payroll add start_date date not null;
 
 Use Case-10:
 insert into employee_payroll values (2, 'Terrisa','NULL' ,'NULL', 'sales', 'F', 3000000,0 ,0 , 0, 0, '2019-11-13'),
-									(6, 'Terrisa','NULL' ,'NULL', 'Marketting','F', 3000000,1000000, 2000000, 500000, 1500000,'2020-11-13');
+				(6, 'Terrisa','NULL' ,'NULL', 'Marketting','F', 3000000,1000000, 2000000, 500000, 1500000,'2020-11-13');
 insert into employee_payroll values(3, 'Rekha','NULL' ,'NULL', 'IT','F', 6000000,1000000, 5000000, 200000, 1500000,'2020-12-27'),
-									(4, 'Sai','NULL' ,'NULL', 'Sales','M', 8000000,1000000, 9000000, 700000, 1500000,'2020-12-22');
+				(4, 'Sai','NULL' ,'NULL', 'Sales','M', 8000000,1000000, 9000000, 700000, 1500000,'2020-12-22');
 select * from employee_payroll where employee_name = 'Terrisa';
